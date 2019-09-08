@@ -1,0 +1,32 @@
+spring:
+ application:
+   name: initialize
+ datasource:
+    jdbc-url: jdbc:mysql://127.0.0.1:3306/init?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+ redis:
+   database: 0
+   host: 127.0.0.1
+   port: 6379
+   password:
+   lettuce:
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1ms
+      min-idle: 0
+    shutdown-timeout: 100ms
+
+server:
+  port: 8888
+  servlet:
+    context-path: /initialize
+logging:
+  file: my.log
+  path: E:\init
+  level:
+   com.whd.initialize: info
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
