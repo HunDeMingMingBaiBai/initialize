@@ -14,6 +14,7 @@ public class TestServiceImpl implements TestService {
     @Autowired
     private TestMapper testMapper;
 
+    @Override
     public List<Test> getAll(){
         return testMapper.getAll();
     }
