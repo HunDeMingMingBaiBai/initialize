@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * @author WHD
+ * @date 2019/9/9 15:39
+ */
 @Service
 public class TestServiceImpl implements TestService {
 
@@ -15,7 +19,8 @@ public class TestServiceImpl implements TestService {
     private TestMapper testMapper;
 
     @Override
-    public List<Test> getAll(){
-        return testMapper.getAll();
+    public List<Test> getAll() {
+        return testMapper.selectAll();
     }
+
 }

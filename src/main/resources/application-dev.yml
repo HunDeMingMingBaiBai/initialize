@@ -2,7 +2,7 @@ spring:
  application:
    name: initialize
  datasource:
-    jdbc-url: jdbc:mysql://127.0.0.1:3306/init?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    jdbc-url: jdbc:mysql://127.0.0.1:3306/initialize?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
@@ -36,7 +36,6 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml
   type-aliases-package: com.whd.initialize.domain
 pagehelper:
-  dialect: mysql
   reasonable: true
   support-methods-arguments: true
   params: count=countSql

@@ -5,6 +5,8 @@
 
 <generatorConfiguration>
 
+    <classPathEntry location="D:\repository\mysql\mysql-connector-java\8.0.17\mysql-connector-java-8.0.17.jar"/>
+
     <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
 
         <property name="autoDelimitKeywords" value="true"/>
@@ -16,7 +18,7 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/init"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/initialize?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=UTC&amp;useSSL=true"
                         userId="root"
                         password="root">
         </jdbcConnection>
@@ -32,8 +34,9 @@
         <!-- 生成的DAO mapper接口 -->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.whd.initialize.mapper"  targetProject="D:\initWork\initialize\src\main\java"/>
 
-        <table tableName="%">
+        <table tableName="test">
             <generatedKey column="id" sqlStatement="Mysql"/>
         </table>
     </context>
 </generatorConfiguration>
+<!-- 配置运行maven命令  mybatis-generator:generate -e -->
