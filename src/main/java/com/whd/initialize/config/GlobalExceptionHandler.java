@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 统一异常处理Controller
  * 关键点：
+ *
  * @ControllerAdvice
  * @ExceptionHandler
  */
@@ -18,7 +19,7 @@ public class GlobalExceptionHandler {
     public static final String DEFAULT_ERROR_VIEW = "error";
 
     @ExceptionHandler(value = Exception.class)
-    public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception{
+    public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
         ModelAndView mav = new ModelAndView();
         mav.addObject("exception", e);
         mav.addObject("url", req.getRequestURL());

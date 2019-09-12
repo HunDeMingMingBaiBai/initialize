@@ -25,14 +25,14 @@ public class TestController {
 
     @RequestMapping("/getAll")
     @ResponseBody
-    public Object getAll(){
+    public Object getAll() {
         return testService.getAll();
     }
 
     @RequestMapping("/testRedis")
     @ResponseBody
-    public Object testRedis(){
-    	redisTemplate.opsForValue().set("test","test",300, TimeUnit.SECONDS);
+    public Object testRedis() {
+        redisTemplate.opsForValue().set("test", "test", 300, TimeUnit.SECONDS);
         return "success";
     }
 
